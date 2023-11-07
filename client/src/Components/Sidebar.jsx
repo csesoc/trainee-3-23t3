@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Sidebar.css';
 import {SidebarInfo} from './SidebarInfo'
 
 function Sidebar() {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen)
+  };
+
   return (
-    <div className="sidebar">
-      <ul className="sidebarlist">
+    <div className={`sidebar ${isOpen ? '' : 'closed'}`}>
+      <button onClick={toggleSidebar} className="toggle-button">
+        {isOpen ? 'Close sidebar' : 'Open sidebar'}
+      </button>
+      {isOpen && <ul className="sidebarlist">
         {SidebarInfo.map((value, key) => {
           return (
             <li key={key} className="row">
@@ -15,7 +24,7 @@ function Sidebar() {
             
           );
         })}
-      </ul>
+      </ul>}
     </div>
   );
 }

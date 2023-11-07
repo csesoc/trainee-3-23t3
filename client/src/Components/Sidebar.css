@@ -5,6 +5,17 @@
   overflow: hidden;
 }
 
+.sidebar.closed {
+  width: 50px;
+}
+
+.toggle-button {
+  position: relative;
+  top: 50%;
+  left: 48%;
+  transform: translateY(-50%);
+}
+
 .sidebarlist {
   height: auto;
   width: 250px;
@@ -27,6 +38,11 @@
   overflow: hidden;
   align-items: center;
   margin-bottom: 10px;
+}
+
+.sidebarlist .row:hover {
+  background-color: rgb(32, 31, 31);
+  cursor: pointer;
 }
 
 .icon {
