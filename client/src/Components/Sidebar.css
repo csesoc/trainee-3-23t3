@@ -1,29 +1,39 @@
 .sidebar {
   height: 100%;
   width: 300px;
-  background-color: black;
+  background-color: white;
+  overflow: hidden;
 }
 
 .sidebarlist {
   height: auto;
   width: auto;
-  background-color: red;
+  background-color: black;
   padding-bottom: 0px;
   padding-left: 0px;
+  overflow: hidden;
 }
 
 .sidebarlist .row {
-  flex-direction: row;
-  color: white;
-  border: 1px solid black;
   display: flex;
-  padding-left: 100px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  overflow: hidden;
+  align-items: center;
 }
 
-.row #title {
-  flex: 70%;
-  place-items: center;
+.icon {
+  padding-top: 5px;
+  margin-right: 15px; 
+  overflow: hidden;
 }
+
+.title {
+  padding-left: 10px;
+}
+

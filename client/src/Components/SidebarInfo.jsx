@@ -1,22 +1,25 @@
 // Contains Title 
 // Contains Link
 // Contains Icon 
+import {BiHome, BiSolidPlaylist} from "react-icons/bi"
+import {FaUserFriends} from "react-icons/fa"
+
 
 export const SidebarInfo = [
   {
     title: "Home",
-    icon: "TBD",
+    icon: <BiHome></BiHome>,
     link: "/", 
   }, 
   {
-    title: "Playlist",
-    icon: "TBD",
+    title: "Your Playlist",
+    icon: <BiSolidPlaylist></BiSolidPlaylist>,
     link: "/playlist"
   },
   {
-    title: "Analytics",
-    icon: "TBD",
-    link: "/playlist"
+    title: "Friends",
+    icon: <FaUserFriends></FaUserFriends>,
+    link: "/friends"
   },
   {
     
