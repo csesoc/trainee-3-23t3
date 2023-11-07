@@ -1,18 +1,18 @@
 .sidebar {
   height: 100%;
-  width: 340px;
+  width: 270px;
   background-color: rgb(32, 31, 31);
   overflow: hidden;
 }
 
 .sidebarlist {
   height: auto;
-  width: 300px;
+  width: 250px;
   background-color: rgb(37, 35, 35);
   padding-left: 0px;
   overflow: hidden;
   margin-top: 100px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .sidebarlist .row {
