@@ -12,6 +12,7 @@ function Sidebar() {
               <div className="icon">{value.icon}</div>
               <div className="title">{value.title}</div>
             </li>
+            
           );
         })}
       </ul>

@@ -3,6 +3,7 @@
 // Contains Icon 
 import {BiHome, BiSolidPlaylist} from "react-icons/bi"
 import {FaUserFriends} from "react-icons/fa"
+import {IoMdCreate} from "react-icons/io"
 
 
 export const SidebarInfo = [
@@ -12,7 +13,12 @@ export const SidebarInfo = [
     link: "/", 
   }, 
   {
-    title: "Your Playlist",
+    title: "Playlist Generator",
+    icon: <IoMdCreate></IoMdCreate>,
+    link: "/generator"
+  },
+  {
+    title: "Your Playlists",
     icon: <BiSolidPlaylist></BiSolidPlaylist>,
     link: "/playlist"
   },
@@ -21,7 +27,5 @@ export const SidebarInfo = [
     icon: <FaUserFriends></FaUserFriends>,
     link: "/friends"
   },
-  {
-    
-  }
+
 ]

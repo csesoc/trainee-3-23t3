@@ -1,17 +1,18 @@
 .sidebar {
   height: 100%;
-  width: 300px;
-  background-color: white;
+  width: 340px;
+  background-color: rgb(32, 31, 31);
   overflow: hidden;
 }
 
 .sidebarlist {
   height: auto;
-  width: auto;
-  background-color: black;
-  padding-bottom: 0px;
+  width: 300px;
+  background-color: rgb(37, 35, 35);
   padding-left: 0px;
   overflow: hidden;
+  margin-top: 150px;
+  margin-left: 20px;
 }
 
 .sidebarlist .row {
@@ -25,6 +26,7 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   overflow: hidden;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .icon {
