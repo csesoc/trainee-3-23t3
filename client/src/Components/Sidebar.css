@@ -1,0 +1,29 @@
+.sidebar {
+  height: 100%;
+  width: 300px;
+  background-color: black;
+}
+
+.sidebarlist {
+  height: auto;
+  width: auto;
+  background-color: red;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.sidebarlist .row {
+  flex-direction: row;
+  color: white;
+  border: 1px solid black;
+  display: flex;
+  padding-left: 100px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.row #title {
+  flex: 70%;
+  place-items: center;
+}
