@@ -1,4 +1,15 @@
 .App {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  height: 100%;
+}
+
+.generator-page {
+  flex-grow: 1;
+  height: 100%;
 }

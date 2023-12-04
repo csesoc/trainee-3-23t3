@@ -1,66 +1,87 @@
 /* App.css */
 .app-container {
-    background-color: #2c1f3d;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 20px;
-  }
-  
-  .main-content {
-    margin-top: 20px;
-  }
-  
-  .mood-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    background-color: #3e2a54;
-    color: #ffffff;
-  }
-  
-  .generate-button {
-    background-color: #ff6b6b;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .example-moods {
-    margin-top: 20px;
-  }
-  
-  .example-moods ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .example-moods li {
-    margin-bottom: 5px;
-  }
-  
-  .footer {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .footer a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 10px;
-  }
+  background-color: #2c1f3d;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding-left: 20px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.header-title {
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.header-title:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.mood-input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: #3e2a54;
+  color: #ffffff;
+  font-size: medium;
+}
+
+.generate-button {
+  background-color: #816bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 7px;
+  margin-left: 5px;
+}
+
+.example-moods {
+  margin-top: 20px;
+}
+
+.example-moods ul {
+  list-style: none;
+  padding: 0;
+}
+
+.example-moods li {
+  margin-bottom: 5px;
+}
+
+.footer {
+  text-align: center;
+  margin-bottom: 10px;
+  grid-row: 3;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 10px;
+}
