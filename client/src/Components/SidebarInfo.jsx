@@ -15,12 +15,12 @@ export const SidebarInfo = [
   {
     title: "Playlist Generator",
     icon: <IoMdCreate></IoMdCreate>,
-    link: "/generator"
+    link: "/generate"
   },
   {
     title: "Your Playlists",
     icon: <BiSolidPlaylist></BiSolidPlaylist>,
-    link: "/playlist"
+    link: "/playlists"
   },
   {
     title: "Friends",

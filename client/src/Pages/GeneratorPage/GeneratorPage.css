@@ -4,9 +4,10 @@
   color: #ffffff;
   font-family: Arial, sans-serif;
   padding-left: 20px;
-  min-height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  flex: 1;
 }
 
 .header {
