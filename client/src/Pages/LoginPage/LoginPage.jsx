@@ -5,11 +5,10 @@ import axios from 'axios';
 
 function Login() {
 
-    const CLIENT_ID = "565694e7f53e4306860cdf425e9326d2";
     const REDIRECT_URI = "http://localhost:5173/";
     const RESPONSE_TYPE = "token";
     const scope = ['playlist-modify-private', 'playlist-modify-public'];
-    const authUrl = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=${RESPONSE_TYPE}&redirect_uri=${REDIRECT_URI}&scope=${scope.join("%20")}`;
+    const authUrl = `https://accounts.spotify.com/authorize?client_id=${process.env.REACT_APP_CLIENT_ID}&response_type=${RESPONSE_TYPE}&redirect_uri=${REDIRECT_URI}&scope=${scope.join("%20")}`;
 
     const [token, setToken] = useState("");
     const [searchKey, setSearchKey] = useState("");
@@ -69,7 +68,6 @@ function Login() {
                 :
                 <a onClick={logout} className='login-button'>Connect Spotify</a>
             }
-
             {token &&
                 <form onSubmit={searchArtists}>
                     <input type="text" onChange={e => setSearchKey(e.target.value)} />
