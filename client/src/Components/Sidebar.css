@@ -15,8 +15,9 @@
   top: 50%;
   left: 48%;
   transform: translateY(-50%);
-  color: white;
-  background-color: black;
+  color: #191414;
+  background-color: #1DB954;
+  border-radius: 5rem;
 }
 
 .sidebarlist {
@@ -31,9 +32,9 @@
 
 .sidebarlist .row {
   display: flex;
-  color: white;
-  border: 1px solid white;
-  border-radius: 15px;
+  color: #1DB954;
+  border: 1px solid #1DB954;
+  border-radius: 5rem;
   padding-bottom: 10px;
   padding-left: 15px;
   padding-top: 10px;

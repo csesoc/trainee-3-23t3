@@ -1,7 +1,8 @@
 import React from 'react'
 import './GeneratorPage.css'
 
-function GeneratorPage() {
+function GeneratorPage({ code }) {
+
   return (
     <div className="app-container">
       <header className="header">

@@ -1,0 +1,50 @@
+.login-page-container {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.header-title {
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1DB954;
+    color: #191414;
+    text-decoration: none;
+    border-radius: 5rem;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20%;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-button:hover {
+    background-color: #1AA048;
+    color: black
+}
+
+.moodify-logo {
+    height: 15vw;
+    width: 15vw;
+}
