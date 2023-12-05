@@ -19,8 +19,8 @@
 //   // creating instance with developer spotify account
 //   const spotifyApi = new SpotifyWebApi({
 //     redirectUri: 'http://localhost:5173/',
-//     clientId: '565694e7f53e4306860cdf425e9326d2',
-//     clientSecret: 'b96c2e60a12646e7a645f342f307bd2a'
+//     clientId: '',
+//     clientSecret: ''
 //   });
 
 //   // authorise code passed from user authentication and extract access details
@@ -40,8 +40,8 @@
 //   const refreshToken = req.body.refreshToken;
 //   const spotifyApi = new SpotifyWebApi({
 //     redirectUri: 'http://localhost:5173/',
-//     clientId: '565694e7f53e4306860cdf425e9326d2',
-//     clientSecret: 'b96c2e60a12646e7a645f342f307bd2a',
+//     clientId: '',
+//     clientSecret: '',
 //     refreshToken
 //   });
 

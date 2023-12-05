@@ -6,13 +6,14 @@ import axios from 'axios';
 function Login() {
 
     const REDIRECT_URI = "http://localhost:5173/";
+    const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
     const RESPONSE_TYPE = "token";
     const scope = ['playlist-modify-private', 'playlist-modify-public'];
-    const authUrl = `https://accounts.spotify.com/authorize?client_id=${process.env.REACT_APP_CLIENT_ID}&response_type=${RESPONSE_TYPE}&redirect_uri=${REDIRECT_URI}&scope=${scope.join("%20")}`;
+    const authUrl = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=${RESPONSE_TYPE}&redirect_uri=${REDIRECT_URI}&scope=${scope.join("%20")}`;
 
     const [token, setToken] = useState("");
     const [searchKey, setSearchKey] = useState("");
-    const [artists, setArtists] = useState([])
+    const [tracks, setTracks] = useState([])
 
     useEffect(() => {
         const hash = window.location.hash;
@@ -33,27 +34,34 @@ function Login() {
         window.localStorage.removeItem("token");
     }
 
-    const searchArtists = async (e) => {
+    const searchTracks = async (e) => {
         e.preventDefault();
-        const { data } = await axios.get("https://api.spotify.com/v1/search", {
+
+        // example api call - rn seed artists are travis + drake with genre suited towards gym music
+        const { data } = await axios.get("https://api.spotify.com/v1/recommendations", {
             headers: {
                 Authorization: `Bearer ${token}`
             },
             params: {
-                q: searchKey,
-                type: "artist"
-            }
+                seed_artists: '0Y5tJX1MQlPlqiwlOH1tJY,3TVXtAsR1Inumwj472S9r4',
+                seed_genres: 'rap,hip-hop,workout',
+                min_energy: '0.9',
+                min_popularity: '60'
+            },
         })
-        setArtists(data.artists.items)
+        console.log(data);
+
+        setTracks(data.tracks)
     }
 
 
-    const renderArtists = () => {
-        return artists.map(artist => (
-            <div key={artist.id}>
-                {artist.images.length ? <img width={"100%"} src={artist.images[0].url} alt="" /> : <div>No Image</div>}
-                {artist.name}
+    const renderTracks = () => {
+        return tracks.map(track => (
+            <div key={track.name}>
+                {track.album.images.length ? <img width={"100%"} src={track.album.images[0].url} alt="" /> : <div>No Image</div>}
+                {track.name}
             </div>
+
         ))
     }
 
@@ -66,15 +74,15 @@ function Login() {
             {!token ?
                 <a href={authUrl} className='login-button'>Connect Spotify</a>
                 :
-                <a onClick={logout} className='login-button'>Connect Spotify</a>
+                <a onClick={logout} className='login-button'>Logout</a>
             }
             {token &&
-                <form onSubmit={searchArtists}>
+                <form onSubmit={searchTracks}>
                     <input type="text" onChange={e => setSearchKey(e.target.value)} />
                     <button type="submit">Search</button>
                 </form>}
 
-            {renderArtists()}
+            {renderTracks()}
         </div>
     )
 
