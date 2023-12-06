@@ -6,7 +6,8 @@ import GeneratorPage from './Pages/GeneratorPage/GeneratorPage';
 function App() {
   return (
     <div className="App">
-      <GeneratorPage />
+      <Sidebar/>
+      <GeneratorPage/>
     </div>
   );
 }

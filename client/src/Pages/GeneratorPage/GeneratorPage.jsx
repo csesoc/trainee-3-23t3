@@ -5,12 +5,12 @@ function GeneratorPage() {
     return (
         <div className="app-container">
           <header className="header">
-            <h1>Playlistable.io</h1>
-            <nav className="nav">
+            <h1 className="centered-text">Playlistable.io</h1>
+            {/* <nav className="nav">
               <a href="/">Home</a>
               <a href="/about">About</a>
-              {/* Add more navigation links */}
-            </nav>
+              {/* Add more navigation links }
+            </nav> */}
           </header>
           <main className="main-content">
             <h2>Mood Generator</h2>

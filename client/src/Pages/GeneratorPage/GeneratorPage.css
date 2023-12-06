@@ -11,6 +11,15 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .centered-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    margin-left: 30%;
+  }
   
   .nav a {
     color: #ffffff;
