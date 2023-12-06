@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
-import {SidebarInfo} from './SidebarInfo'
+import { SidebarInfo } from './SidebarInfo'
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
@@ -17,11 +17,11 @@ function Sidebar() {
       {isOpen && <ul className="sidebarlist">
         {SidebarInfo.map((value, key) => {
           return (
-            <li key={key} className="row">
+            <a key={key} className="row" href={value.link}>
               <div className="icon">{value.icon}</div>
               <div className="title">{value.title}</div>
-            </li>
-            
+            </a>
+
           );
         })}
       </ul>}
