@@ -1,18 +1,19 @@
 /* App.css */
 .app-container {
-  background-color: #2c1f3d;
+  background-color: black(32, 31, 31);
   color: #ffffff;
-  font-family: Arial, sans-serif;
   padding-left: 20px;
   height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
   flex: 1;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -40,30 +41,87 @@
 
 .main-content {
   flex: 1;
+  margin-top: 100px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mood-input {
   width: 80%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-  background-color: #3e2a54;
+  border: 1px solid #1AA048;
+  border-width: 0.2rem;
+  border-radius: 15px;
+  background-color: rgb(8, 8, 8);
   color: #ffffff;
   font-size: medium;
 }
 
+.mood-input:focus { 
+  border: 1px solid #1AA048;
+  border-width: 0.2rem;
+  border-radius: 15px;
+}
+
+.mood-input:hover {
+  border: 1px solid #3cac63;
+  border-width: 0.2rem;
+  border-radius: 15px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+
 .generate-button {
-  background-color: #816bff;
+  background-color: #1AA048;
   color: #ffffff;
+  font-weight: bold;
   border: none;
   padding: 10px 20px;
-  border-radius: 7px;
+  border-radius: 25px;
   margin-left: 5px;
+  margin-top: 10px;
+}
+
+.example-text {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: -10px;
 }
 
 .example-moods {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-moods button {
+  margin-left: 20px;
+  color: #1DB954;
+  border: 1px solid #1DB954;
+  border-radius: 2rem;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-top: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  overflow: hidden;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-direction: column;
 }
 
 .example-moods ul {
