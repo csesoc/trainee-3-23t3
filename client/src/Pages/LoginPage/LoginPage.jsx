@@ -6,7 +6,7 @@ import axios from 'axios';
 function Login() {
 
     const REDIRECT_URI = "http://localhost:5173/";
-    const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+    const CLIENT_ID = "REPLACE_THIS_WITH_THE_CLIENT_ID";
     const RESPONSE_TYPE = "token";
     const scope = ['playlist-modify-private', 'playlist-modify-public'];
     const authUrl = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=${RESPONSE_TYPE}&redirect_uri=${REDIRECT_URI}&scope=${scope.join("%20")}`;
