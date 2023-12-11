@@ -1,0 +1,181 @@
+body {
+  background-color: black;
+  position: relative; 
+  font-family: sans-serif;
+}
+
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #adadad;
+  display: flex; 
+  align-items: center; 
+}
+
+.top-right img {
+  width: 60px;
+  height: auto;
+}
+
+.center-left {
+  position: absolute;
+  left: 70px;
+  transform: translateY(2%); 
+}
+
+.center-left img {
+  max-width: 550px; 
+  max-height: 550px;
+}
+
+.small-line {
+  width: 250px;
+  border: 0;
+  border-top: 1px solid #adadad;
+}
+
+.first-line {
+  position: absolute;
+  left: 115px; 
+  top: 500px;
+}
+
+.second-line {
+  position: absolute;
+  left: 450px; 
+  top: 500px;
+}
+
+.third-line {
+  position: absolute;
+  left: 770px; 
+  top: 500px;
+}
+
+.fourth-line {
+  position: absolute;
+  left: 1105px; 
+  top: 500px;
+}
+
+.step1-text {
+  position: absolute;
+  left: 115px; 
+  top: 520px;
+  color: #adadad;
+  font-size: 15px; 
+  font-weight: bold;
+}
+
+.step2-text {
+  position: absolute;
+  left: 452px;
+  top: 520px; 
+  color: #adadad;
+  font-size: 15px; 
+  font-weight: bold;
+}
+
+.step3-text {
+  position: absolute;
+  left: 772px; 
+  top: 520px; 
+  color: #adadad;
+  font-size: 15px; 
+  font-weight: bold;
+}
+
+.step4-text {
+  position: absolute;
+  left: 1107px; 
+  top: 520px; 
+  color: #adadad;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.step1-description {
+  position: absolute;
+  left: 115px; 
+  top: 540px; 
+  color: rgb(28, 215, 96);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.step2-description {
+  position: absolute;
+  left: 450px; 
+  top: 540px; 
+  color: rgb(28, 215, 96);
+  font-size: 24px; 
+  font-weight: bold;
+}
+
+.step3-description {
+  position: absolute;
+  left: 770px; 
+  top: 540px; 
+  color: rgb(28, 215, 96);
+  font-size: 24px; 
+  font-weight: bold;
+}
+
+.step3-description-2 {
+  position: absolute;
+  left: 770px; 
+  top: 565px; 
+  color: rgb(28, 215, 96);
+  font-size: 24px; 
+  font-weight: bold;
+}
+
+.step4-description {
+  position: absolute;
+  left: 1107px;
+  top: 540px;
+  color: rgb(28, 215, 96);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.listening-text {
+  position: absolute;
+  left: 750px; 
+  top: 125px; 
+  color: white;
+  font-size: 55px; 
+  font-weight: bold;
+}
+
+.everything-text {
+  position: absolute;
+  left: 875px; 
+  top: 195px;
+  color: rgb(28, 215, 96);
+  font-size: 55px; 
+  font-weight: bold;
+}
+
+.get-started-button {
+  position: absolute;
+  left: 875px; 
+  top: 350px; 
+  color: white; 
+  font-size: 24px; 
+  font-weight: bold;
+  background-color: rgb(28, 215, 96); 
+  border-radius: 45%; 
+  padding: 10px 20px;
+  z-index: 1; 
+}
+
+.feeling-text {
+  position: absolute;
+  left: 780px; 
+  top: 300px; 
+  color: white;
+  font-size: 14px;
+}
