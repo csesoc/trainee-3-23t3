@@ -5,7 +5,7 @@ import MoodifyLogo from '../assets/moodify.png';
 
 export default function HomePage() {
     return (
-        <>
+        <div className="app-container">
             <div class="top-right">made for <img src={SpotifyLogo}></img></div>
             <div class="center-left"> <img src={MoodifyLogo}></img></div>
             <hr class="small-line first-line" />
@@ -23,8 +23,8 @@ export default function HomePage() {
             <div class="step4-description">Immerse yourself</div>
             <div class="listening-text">Listening is </div>
             <div class="everything-text">everything . </div>
-            <button class="get-started-button">Get Started</button>
+            <a class="get-started-button" href="/generate">Get Started</a>
             <div class="feeling-text">Unleash Your Emotions, Elevate Your Playlist with Moodify.</div>
-        </>
+        </div>
     )
 }

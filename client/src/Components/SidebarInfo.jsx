@@ -10,7 +10,7 @@ export const SidebarInfo = [
   {
     title: "Home",
     icon: <BiHome></BiHome>,
-    link: "/",
+    link: "/home",
   },
   {
     title: "Playlist Generator",

@@ -29,9 +29,9 @@ function Login() {
 
     }, [])
 
-    const logout = () => {
-        setToken("");
+    const handleLogout = () => {
         window.localStorage.removeItem("token");
+        setToken("");
     }
 
     const searchTracks = async (e) => {
@@ -74,9 +74,9 @@ function Login() {
             {!token ?
                 <a href={authUrl} className='login-button'>Connect Spotify</a>
                 :
-                <a onClick={logout} className='login-button'>Logout</a>
+                <a onClick={handleLogout} className='login-button'>Logout</a>
             }
-            {token &&
+            {token.length > 0 &&
                 <form onSubmit={searchTracks}>
                     <input type="text" onChange={e => setSearchKey(e.target.value)} />
                     <button type="submit">Search</button>
