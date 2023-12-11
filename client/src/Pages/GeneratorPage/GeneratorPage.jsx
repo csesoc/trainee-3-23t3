@@ -6,7 +6,7 @@ function GeneratorPage({ code }) {
   return (
     <div className="app-container">
       <header className="header">
-        <a href='/' className='header-title'>Playlistable.io</a>
+        <a href='/' className='header-title'>Moodify</a>
         <nav className="nav">
           <a href="/">Home</a>
           <a href="/about">About</a>

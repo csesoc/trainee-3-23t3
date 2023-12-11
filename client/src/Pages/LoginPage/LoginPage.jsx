@@ -6,7 +6,7 @@ import axios from 'axios';
 function Login() {
 
     const REDIRECT_URI = "http://localhost:5173/";
-    const CLIENT_ID = "REPLACE_THIS_WITH_THE_CLIENT_ID";
+    const CLIENT_ID = "565694e7f53e4306860cdf425e9326d2";
     const RESPONSE_TYPE = "token";
     const scope = ['playlist-modify-private', 'playlist-modify-public'];
     const authUrl = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=${RESPONSE_TYPE}&redirect_uri=${REDIRECT_URI}&scope=${scope.join("%20")}`;
@@ -29,9 +29,9 @@ function Login() {
 
     }, [])
 
-    const logout = () => {
-        setToken("");
+    const handleLogout = () => {
         window.localStorage.removeItem("token");
+        setToken("");
     }
 
     const searchTracks = async (e) => {
@@ -74,9 +74,9 @@ function Login() {
             {!token ?
                 <a href={authUrl} className='login-button'>Connect Spotify</a>
                 :
-                <a onClick={logout} className='login-button'>Logout</a>
+                <a onClick={handleLogout} className='login-button'>Logout</a>
             }
-            {token &&
+            {token.length > 0 &&
                 <form onSubmit={searchTracks}>
                     <input type="text" onChange={e => setSearchKey(e.target.value)} />
                     <button type="submit">Search</button>
