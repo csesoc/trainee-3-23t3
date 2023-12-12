@@ -134,22 +134,55 @@ function GeneratorPage() {
     setTracks(res3.data.tracks);
   }
 
+  const msToMinutesAndSeconds = (ms) => {
+    var minutes = Math.floor(ms / 60000);
+    var seconds = ((ms % 60000) / 1000).toFixed(0);
+    return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+  };
+
 
   const renderTracks = () => {
-    return tracks.map(track => (
-      <div key={track.name}>
-        {track.album.images.length ? <img width={"100%"} src={track.album.images[0].url} alt="" /> : <div>No Image</div>}
-        {track.name}
+    console.log(tracks.artists)
+    return (
+      <div className="tracks">
+        {tracks.map(
+          (track, index) => {
+            return (
+              <div
+                className="row"
+                key={track.id}
+              >
+                <div className="col">
+                  <span>{index + 1}</span>
+                </div>
+                <div className="col detail">
+                  <div className="image">
+                    <img src={track.album.images[0].url} alt="track" />
+                  </div>
+                  <div className="info">
+                    <span className="name">{track.name}</span>
+                    <span>{track.artists.map(artist => artist.name).join(", ")}</span>
+                  </div>
+                </div>
+                <div className="col">
+                  <span>{track.album.name}</span>
+                </div>
+                <div className="col">
+                  <span>{msToMinutesAndSeconds(track.duration_ms)}</span>
+                </div>
+              </div>
+            );
+          }
+        )}
       </div>
-
-    ))
+    )
   }
 
 
   return (
     <div className="app-container">
       <header className="header">
-      <a href='/' className='header-title' style={{ color: '#1ED760' }}>Moodify</a>
+        <a href='/' className='header-title' style={{ color: '#1ED760' }}>Moodify</a>
         <nav className="nav">
           <a href="/" style={{ color: '#1ED760' }} >Home</a>
           <a href="/about" style={{ color: '#1ED760' }} >About</a>
@@ -157,25 +190,27 @@ function GeneratorPage() {
         </nav>
       </header>
       <main className="main-content">
-       <h2 style={{ color: '#1ED760', fontSize: '25px' }} >Mood Generator</h2>
+        <h2 style={{ color: '#1ED760', fontSize: '25px' }} >Mood Generator</h2>
         <p style={{ color: 'white', fontSize: '16px' }}>Describe what mood you're in. Try to be as specific as possible.</p>
         {token && token.length > 0 &&
           <form onSubmit={searchTracks}>
-            <input 
+            <input
               type="text"
               placeholder="E.g., generate a playlist for sad boi hours..."
               className="mood-input" onChange={e => setSearchKey(e.target.value)} value={searchKey} />
             <button className="generate-button" type="submit">Generate Playlist</button>
           </form>}
-        <div className="example-moods">
-          <p style={{ color: '#1ED760', fontSize: '20px' }}> Example Moods:</p>
-          <ul style={{ color: 'white', fontSize: '16px' }}>
-            <li>Happy</li>
-            <li>Chill</li>
-            <li>Energetic</li>
-            {/* Add more example moods */}
-          </ul>
-        </div>
+        {tracks.length > 0 ? renderTracks() :
+          <div className="example-moods">
+            <p style={{ color: '#1ED760', fontSize: '20px' }}> Example Moods:</p>
+            <ul style={{ color: 'white', fontSize: '16px' }}>
+              <li>Happy</li>
+              <li>Chill</li>
+              <li>Energetic</li>
+              {/* Add more example moods */}
+            </ul>
+          </div>
+        }
       </main>
       <footer className="footer">
         <a href="/privacy">Privacy Policy</a>
@@ -183,7 +218,6 @@ function GeneratorPage() {
         {/* Add more footer links */}
       </footer>
 
-      {renderTracks()}
     </div>
   );
 };

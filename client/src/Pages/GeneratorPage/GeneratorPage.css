@@ -80,7 +80,7 @@
 
 .footer {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   grid-row: 3;
 }
 
@@ -88,4 +88,46 @@
   color: #ffffff;
   text-decoration: none;
   margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.tracks {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+
+}
+
+.row {
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: 0.3fr 3.1fr 2fr 0.1fr;
+}
+
+
+.row:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  color: #dddcdc;
+
+}
+
+.col img {
+  height: 40px;
+  width: 40px;
+}
+
+.detail {
+  display: flex;
+  gap: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
 }

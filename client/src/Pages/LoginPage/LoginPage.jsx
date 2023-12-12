@@ -5,7 +5,7 @@ import logoImage from '../../assets/logo4.png'
 function Login() {
 
     const REDIRECT_URI = "http://localhost:5173/generate";
-    const CLIENT_ID = "565694e7f53e4306860cdf425e9326d2";
+    const CLIENT_ID = "cfc176bf55d14b62b23e8208cae6f7c8";
     const RESPONSE_TYPE = "token";
     const scope = ['playlist-modify-private', 'playlist-modify-public', 'user-top-read'];
     const authUrl = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=${RESPONSE_TYPE}&redirect_uri=${REDIRECT_URI}&scope=${scope.join("%20")}`;
