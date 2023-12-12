@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './HomePage.css';
 import SpotifyLogo from '../../assets/spotifylogo.webp';
-import MoodifyLogo from '../../assets/moodify.png';
+import MoodifyLogo from '../../assets/moodify-logo.png';
 import { useNavigate } from 'react-router-dom';
 
 export default function HomePage() {
