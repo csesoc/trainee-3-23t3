@@ -14,7 +14,7 @@ function PlaylistPage({ code }) {
         </nav>
       </header>
       <main className="main-content">
-        <h1> <p> You Have No Playlist. Click Playlist Generator to Get Started! </p></h1>
+        <h1> <p> You Have No Playlists. Click Playlist Generator to Get Started! </p></h1>
       </main>
       <footer className="footer">
         <a href="/privacy">Privacy Policy</a>
