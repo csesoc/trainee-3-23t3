@@ -149,26 +149,27 @@ function GeneratorPage() {
   return (
     <div className="app-container">
       <header className="header">
-        <a href='/' className='header-title'>Moodify</a>
+      <a href='/' className='header-title' style={{ color: '#1ED760' }}>Moodify</a>
         <nav className="nav">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
+          <a href="/" style={{ color: '#1ED760' }} >Home</a>
+          <a href="/about" style={{ color: '#1ED760' }} >About</a>
           {/* Add more navigation links */}
         </nav>
       </header>
       <main className="main-content">
-        <h2>Mood Generator</h2>
-        <p>Describe what mood you're in. Try to be as specific as possible.</p>
+       <h2 style={{ color: '#1ED760', fontSize: '25px' }} >Mood Generator</h2>
+        <p style={{ color: 'white', fontSize: '16px' }}>Describe what mood you're in. Try to be as specific as possible.</p>
         {token && token.length > 0 &&
           <form onSubmit={searchTracks}>
-            <input type="text"
+            <input 
+              type="text"
               placeholder="E.g., generate a playlist for sad boi hours..."
               className="mood-input" onChange={e => setSearchKey(e.target.value)} value={searchKey} />
             <button className="generate-button" type="submit">Generate Playlist</button>
           </form>}
         <div className="example-moods">
-          <p>Example Moods:</p>
-          <ul>
+          <p style={{ color: '#1ED760', fontSize: '20px' }}> Example Moods:</p>
+          <ul style={{ color: 'white', fontSize: '16px' }}>
             <li>Happy</li>
             <li>Chill</li>
             <li>Energetic</li>
