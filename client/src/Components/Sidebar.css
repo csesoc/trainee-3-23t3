@@ -1,7 +1,7 @@
 .sidebar {
   height: 100%;
   width: 270px;
-  background-color: rgb(32, 31, 31);
+  background-color: rgb(32, 32, 29);
   overflow: hidden;
 }
 
@@ -23,7 +23,7 @@
 .sidebarlist {
   height: auto;
   width: 250px;
-  background-color: rgb(37, 35, 35);
+  background-color: rgb(32, 32, 29);
   padding-left: 0px;
   overflow: hidden;
   margin-top: 100px;

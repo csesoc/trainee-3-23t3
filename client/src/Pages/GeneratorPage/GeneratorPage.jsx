@@ -142,38 +142,50 @@ function GeneratorPage() {
 
 
   const renderTracks = () => {
-    console.log(tracks.artists)
     return (
-      <div className="tracks">
-        {tracks.map(
-          (track, index) => {
-            return (
-              <div
-                className="row"
-                key={track.id}
-              >
-                <div className="col">
-                  <span>{index + 1}</span>
-                </div>
-                <div className="col detail">
-                  <div className="image">
-                    <img src={track.album.images[0].url} alt="track" />
+      <div className="list">
+        <div className="header-row">
+          <div className="col">
+            <span>#</span>
+          </div>
+          <div className="col">
+            <span>TITLE</span>
+          </div>
+          <div className="col">
+            <span>ALBUM</span>
+          </div>
+        </div>
+        <div className="tracks">
+          {tracks.map(
+            (track, index) => {
+              return (
+                <div
+                  className="row"
+                  key={track.id}
+                >
+                  <div className="col">
+                    <span>{index + 1}</span>
                   </div>
-                  <div className="info">
-                    <span className="name">{track.name}</span>
-                    <span>{track.artists.map(artist => artist.name).join(", ")}</span>
+                  <div className="col detail">
+                    <div className="image">
+                      <img src={track.album.images[0].url} alt="track" />
+                    </div>
+                    <div className="info">
+                      <span className="name">{track.name}</span>
+                      <span>{track.artists.map(artist => artist.name).join(", ")}</span>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <span>{track.album.name}</span>
+                  </div>
+                  <div className="col">
+                    <span>{msToMinutesAndSeconds(track.duration_ms)}</span>
                   </div>
                 </div>
-                <div className="col">
-                  <span>{track.album.name}</span>
-                </div>
-                <div className="col">
-                  <span>{msToMinutesAndSeconds(track.duration_ms)}</span>
-                </div>
-              </div>
-            );
-          }
-        )}
+              );
+            }
+          )}
+        </div>
       </div>
     )
   }
