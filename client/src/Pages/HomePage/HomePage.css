@@ -158,13 +158,22 @@
   position: absolute;
   left: 875px;
   top: 350px;
-  color: white;
-  font-size: 24px;
+  color: #191414;
+  font-size: 16px;
   font-weight: bold;
-  background-color: rgb(28, 215, 96);
-  border-radius: 45%;
+  cursor: pointer;
+  background-color: #1DB954;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5rem;
   padding: 10px 20px;
+  text-decoration: none;
   z-index: 1;
+}
+
+.get-started-button:hover {
+  background-color: #1AA048;
+  color: black
 }
 
 .feeling-text {
