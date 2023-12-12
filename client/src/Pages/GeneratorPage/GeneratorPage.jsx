@@ -159,12 +159,13 @@ function GeneratorPage() {
       <main className="main-content">
         <h2>Mood Generator</h2>
         <p>Describe what mood you're in. Try to be as specific as possible.</p>
-        <input
-          type="text"
-          placeholder="E.g., generate a playlist for sad boi hours..."
-          className="mood-input"
-        />
-        <button className="generate-button">Generate Playlist</button>
+        {token && token.length > 0 &&
+          <form onSubmit={searchTracks}>
+            <input type="text"
+              placeholder="E.g., generate a playlist for sad boi hours..."
+              className="mood-input" onChange={e => setSearchKey(e.target.value)} value={searchKey} />
+            <button className="generate-button" type="submit">Generate Playlist</button>
+          </form>}
         <div className="example-moods">
           <p>Example Moods:</p>
           <ul>
@@ -180,11 +181,6 @@ function GeneratorPage() {
         <a href="/contact">Contact Us</a>
         {/* Add more footer links */}
       </footer>
-      {token && token.length > 0 &&
-        <form onSubmit={searchTracks}>
-          <input type="text" onChange={e => setSearchKey(e.target.value)} value={searchKey} />
-          <button type="submit">Search</button>
-        </form>}
 
       {renderTracks()}
     </div>
