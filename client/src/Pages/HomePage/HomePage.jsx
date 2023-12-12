@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './HomePage.css';
 import SpotifyLogo from '../../assets/spotifylogo.webp';
 import MoodifyLogo from '../../assets/moodify.png';
+import { useNavigate } from 'react-router-dom';
 
 export default function HomePage() {
     const [token, setToken] = useState(false);
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         let localToken = window.localStorage.getItem("token");
@@ -37,7 +40,11 @@ export default function HomePage() {
             <div className="everything-text">everything . </div>
             {!token ?
                 <a className="get-started-button" href="/login">Login to Spotify</a>
-                : <button className="get-started-button" onClick={handleLogout}>Logout from Spotify</button>
+                :
+                <div className='logout-button-container'>
+                    <button className="logout-button" onClick={() => navigate(-1)}>Go back</button>
+                    <button className="logout-button" onClick={handleLogout}>Logout from Spotify</button>
+                </div>
             }
             <div className="feeling-text">Unleash Your Emotions, Elevate Your Playlist with Moodify.</div>
         </div>
