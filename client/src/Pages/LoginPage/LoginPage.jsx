@@ -7,7 +7,7 @@ function Login() {
     const REDIRECT_URI = "http://localhost:5173/generate";
     const CLIENT_ID = "565694e7f53e4306860cdf425e9326d2";
     const RESPONSE_TYPE = "token";
-    const scope = ['playlist-modify-private', 'playlist-modify-public'];
+    const scope = ['playlist-modify-private', 'playlist-modify-public', 'user-top-read'];
     const authUrl = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=${RESPONSE_TYPE}&redirect_uri=${REDIRECT_URI}&scope=${scope.join("%20")}`;
 
     const [token, setToken] = useState("");
