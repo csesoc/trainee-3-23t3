@@ -21,6 +21,8 @@ Elevate your music journey with Moodify - where your mood sets the rhythm! 🎶
 
 <img width="1440" alt="Screenshot 2023-12-28 at 2 20 38 pm" src="https://github.com/csesoc/trainee-3-23t3/assets/95948346/92aa02ad-6c50-48f3-8362-d29ca13ca83d">
 <br\>
+
+<br>
 <img width="1434" alt="Screenshot 2023-12-28 at 2 21 34 pm" src="https://github.com/csesoc/trainee-3-23t3/assets/95948346/0bceea56-e053-4724-8b07-6569c6356494">
 
 
