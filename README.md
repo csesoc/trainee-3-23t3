@@ -1,4 +1,4 @@
-# trainee-3-23t3
+# Moodify
 
 ## Setup
 Clone the repository
