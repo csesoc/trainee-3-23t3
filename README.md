@@ -1,20 +1,23 @@
-# Moodify
-Moodify is your one-stop shop for playlist generation based on your mood!!!
-- Playlist Generation based on Mood/Activities and your current listening history
-- Allows users to send the generated playlist directly to their account + regenerate/filter based on preferences
-- Automatically create shared playlists with friends 
+# Moodify: Your Ultimate Mood-Driven Playlist Generator!
 
+Discover the power of personalized playlists tailored to your mood and activities with Moodify!
 
-## Current Features
-- Spotify account integration, allowing users to log into their own spotify accounts to generate playlists
-- Input bar allowing users to enter their mood, using fuzzy matching (NLP model) to map entered moods to spotify API seeds to influence song generation
-- Playlist generation based on entered mood and song play history
+## Key Features
+- Effortless playlist generation based on mood, activities, and your listening history.
+- Seamless Spotify account integration for a personalized music experience.
+- Directly send and regenerate playlists with customized preferences.
+- Automatic creation of shared playlists with friends for a collaborative music experience.
 
+## Current Capabilities
+- Integrate with your Spotify account to generate personalized playlists.
+- Input bar with fuzzy matching (NLP model) for precise mood mapping to Spotify API seeds.
+- Dynamic playlist creation based on entered moods and song play history.
 
-## Upcoming Features
-- Playlist link generation to share generated songs with friends
-- Chat GPT API integration with search bar to replace fuzzy matching, allowing for less specific mood inputs and more accurate mood / playlist generation
+## Upcoming Enhancements
+- Shareable playlist links for easy music sharing with friends.
+- Integration of Chat GPT API in the search bar for refined mood inputs and more accurate playlist generation.
 
+Elevate your music journey with Moodify - where your mood sets the rhythm! 🎶
 
 
 ## Setup
